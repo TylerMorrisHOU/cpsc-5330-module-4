@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     func playSound() {
-        guard let soundURL = Bundle.main.url(forResource: "sound", withExtension: "mp3") else {
+        guard let soundURL = Bundle.main.url(forResource: "lotus-sky-dreams-216049", withExtension: "mp3") else {
                 print("Sound file not found")
                 return
             }
@@ -64,8 +64,7 @@ class ViewController: UIViewController {
                 self.updateTimeRemaining()
             } else {
                 timer.invalidate()
-                //let systemSoundID: SystemSoundID = 1304
-                //AudioServicesPlaySystemSound(systemSoundId)
+                playSound()
                 button.setTitle("Stop Music", for: .normal)
                 buttonCycle = 1
             }
